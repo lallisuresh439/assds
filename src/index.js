@@ -25,40 +25,6 @@ app.get("/login", async (req, res) => {
     res.render('login');
 });
 
-app.post("/loginIn", async (req, res) => {
-    const data = {
-        email: req.body.email,
-        password: req.body.password
-    };
-    console.log(data);
-    try {
-        // Check if the user exists
-        const user = await UserModel.findOne({ email: data.email });
-        if (!user) {
-            return res.status(401).json({ message: "Invalid email or password" });
-        }
-        // Compare password
-        const isMatch = await bcrypt.compare(data.password, user.password);
-        if (!isMatch) {
-            return res.status(401).json({ message: "Invalid email or password" });
-        }
-        // Generate JWT
-        const token = jwt.sign({ id: user._id, email: user.email }, "your_jwt_secret", { expiresIn: '1h' });
-
-        // Set JWT in cookie with appropriate options
-        res.cookie('token', token, {
-            httpOnly: true,
-            sameSite: 'None', // If you are deploying, change this to 'None'
-            secure: process.env.NODE_ENV === 'production'  // If you are deploying to HTTPS, make this true
-        });
-
-        return res.status(200).json({ message: "Login successful!" });
-
-    } catch (error) {
-        res.status(500).json({ message: "Server error. Please try again later." });
-    }
-});
-
 
 // JWT authentication middleware
 function authenticateToken(req, res, next) {
@@ -71,7 +37,7 @@ function authenticateToken(req, res, next) {
             : res.redirect('/login');
     }
 
-    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    jwt.verify(token, "your_jwt_secret", (err, user) => {
         if (err) {
             const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
             return wantsJSON
@@ -83,6 +49,9 @@ function authenticateToken(req, res, next) {
         next();
     });
 }
+
+
+
 // Public routes (no auth required)
 app.get("/main", async (req, res) => {
     res.render('main');
@@ -92,6 +61,9 @@ app.get("/careerneeds", async (req, res) => {
 });
 app.get("/aboutneeds", async (req, res) => {
     res.render('mabout');
+});
+app.get("/login", async (req, res) => {
+    res.render('login');
 });
 app.get("/user-login", async (req, res) => {
     res.render('user-login');
@@ -149,6 +121,48 @@ app.post("/signup", async (req, res) => {
     }
 });
 
+//user login
+
+app.post("/loginIn", async (req, res) => {
+    const data = {
+        email: req.body.email,
+        password: req.body.password
+    };
+    console.log(data);
+    try {
+        // Check if the user exists
+        const user = await UserModel.findOne({ email: data.email });
+        if (!user) {
+            return res.status(401).json({ message: "Invalid email or password" });
+        }
+        // Compare password
+        const isMatch = await bcrypt.compare(data.password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: "Invalid email or password" });
+        }
+        // Generate JWT
+        const token = jwt.sign({ id: user._id, email: user.email }, "your_jwt_secret", { expiresIn: '1h' });
+
+        // Set JWT in cookie with appropriate options
+        res.cookie('token', token, {
+            httpOnly: true,
+            sameSite: 'Lax', // If you are deploying, change this to 'None'
+            secure: false    // If you are deploying to HTTPS, make this true
+        });
+
+        console.log("Login successful!");
+        return res.status(200).json({ message: "Login successful!" });
+
+    } catch (error) {
+        console.error("Login Error:", error.message);
+        res.status(500).json({ message: "Server error. Please try again later." });
+    }
+});
+
+// app.get("/dashboard", (req, res) => {
+//     res.render("dashboard"); // dashboard.ejs must exist in /views folder
+// });
+
 //agent login
 app.post("/loginAgent", async (req, res) => {
     try {
@@ -170,15 +184,14 @@ app.post("/loginAgent", async (req, res) => {
             // ✅ Set JWT in cookie
             res.cookie('token', token, {
                 httpOnly: true,
-                sameSite: 'None', // If you are deploying, change this to 'None'
-                secure:process.env.NODE_ENV === 'production'   // true if using HTTPS
+                sameSite: 'Lax',
+                secure: process.env.NODE_ENV === 'production'  // true if using HTTPS
             });
             return res.status(200).json({ message: "Login successful" });
         } else {
             return res.status(401).json({ message: "Wrong password" });
         }
     } catch (error) {
-        console.error("Login error:", error);
         return res.status(500).json({ message: "Something went wrong" });
     }
 });
@@ -554,6 +567,7 @@ app.get("/openWLCsss",(req,res)=>{
 //add here authentication routes
 
 // ...existing code...
+
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
