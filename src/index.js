@@ -49,7 +49,7 @@ app.post("/loginIn", async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             sameSite: 'None', // If you are deploying, change this to 'None'
-            secure: true    // If you are deploying to HTTPS, make this true
+            secure: process.env.NODE_ENV === 'production'  // If you are deploying to HTTPS, make this true
         });
 
         return res.status(200).json({ message: "Login successful!" });
@@ -171,7 +171,7 @@ app.post("/loginAgent", async (req, res) => {
             res.cookie('token', token, {
                 httpOnly: true,
                 sameSite: 'None', // If you are deploying, change this to 'None'
-                secure: true    // true if using HTTPS
+                secure:process.env.NODE_ENV === 'production'   // true if using HTTPS
             });
             return res.status(200).json({ message: "Login successful" });
         } else {
