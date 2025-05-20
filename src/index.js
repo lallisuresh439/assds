@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
@@ -70,7 +71,7 @@ function authenticateToken(req, res, next) {
             : res.redirect('/login');
     }
 
-    jwt.verify(token, "your_jwt_secret", (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
         if (err) {
             const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
             return wantsJSON
