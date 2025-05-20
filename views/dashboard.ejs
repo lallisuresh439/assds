@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Quality Digital Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+      margin: 0;
+      padding-top: 0px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      /* background-color: #fff; */
+      padding: 10px 20px;
+      /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+    .logo img {
+      height: 100px;
+      margin-right: 10px;
+      width: 500px;
+    }
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links a {
+      text-decoration: none;
+      margin-left: 40px;
+      color: orange;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* margin: 20px; */
+      background: linear-gradient(to right, #001f3f, #003366);
+      color: white;
+      padding: 17px 10px;
+    }
+    h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 35px;
+      margin-left: 70px;
+    }   
+    .card {
+      background-color: white;
+      color: #333;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width:200px;
+      height: 170px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+    .card img {
+      width: 70px;
+      height: 70px;
+    }
+    .earn {
+      font-size: 14px;
+      color: #555;
+      padding-top: 0px;
+    }
+    nav {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: orange;
+    }
+    body {
+      margin: 20px;
+      background-color: #fff;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    .highlight {
+      color: orange;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+      font-size: 22px;
+      color: #003366;
+    }
+    .grid-item {
+      text-align: center;
+      font-size: 19px;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 30px;
+    }
+    .grid-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 8px;
+      border-radius: 30px;
+    }
+    
+    button {
+      color: blue;
+    }
+    .card h3{
+      font-size: 25px;
+    }
+
+body {
+      background: linear-gradient(to bottom, #f7f1ff, #e1f0ff);
+     
+    }
+    .highlight {
+      color: #ff6600;
+      font-weight: bold;
+    }
+    .info-section {
+      padding: 4rem 2rem;
+    }
+    .info-section h1 {
+      font-size: 2.5rem;
+    }
+    .signup-box {
+      background-color: #f8f0ff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .signup-box h3 {
+      font-weight: bold;
+      color: #ff6600;
+    }
+    .signup-btn {
+      border-radius: 10px;
+      font-weight: 600;
+      color: #0d3c61;
+      border: 2px solid #0d3c61;
+      background-color: white;
+    }
+    .signup-btn:hover {
+      background-color: #0d3c61;
+      color: white;
+    }
+    .login-link {
+      font-weight: 500;
+      color: #000;
+      margin-top: 1.2rem;
+    }
+    .login-link a {
+      color: #0047ab;
+      text-decoration: none;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+    .pointer-img {
+        width: 100%;
+        max-width: 500px;      /* Adjust based on layout */
+        height: auto;
+        display: block;
+        margin-top: 0px;
+        margin-left: 380px;
+        object-fit: contain;   /* Preserves image aspect */
+    }
+    .signup-illustration {
+        max-width: 300px; /* increase this from 200px */
+        margin: 1.5rem auto 0;
+    }
+    </style>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="image/dashboard/Hiring Poster1Artboard 8@4x[1](1).jpg" alt="Logo">
+      </div>
+      <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/aboutneed">About Us</a>
+        <a href="/careerneed">Careers</a>
+        <a href="/logoutneed">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 style="color: #fff; padding-right: 100px;">Earn With<span class="highlight"> Quality Digital Services</span>
+      Upto<span class="highlight"> ₹1500</span> Per Application</h2>
+
+    <div class="card">
+      <img src="image/dashboard/Credit Cards Icon.png" alt="Credit Cards Icon">
+      <a href="/creditneed" style="text-decoration: none; color: #333;"><h3>Credit Cards</h3></a>
+      <p class="earn">Earn Upto ₹1110</p>
+    </div>
+    <div class="card" >
+      <img src="image/dashboard/Bank Accounts Icon.png" alt="Bank Accounts Icon">
+      <a href="/bankaccountneed" style="text-decoration: none; color: #333;"><h3>Bank Accounts</h3></a>
+      <p class="earn">Earn Upto ₹300</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Mutual Funds Icon.png" alt="Mutual Fund Icon">
+      <a href="/mutualfundsneed" style="color: #333; text-decoration: none;"><h3>Mutual Fund</h3></a>
+      <p class="earn">Earn Upto ₹150</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Demat Accounts Icon.png" alt="Demat Accounts Icon">
+      <a href="/demataccountneed" style="text-decoration: none; color: #333;"><h3>Demat Accounts</h3></a>
+      <p class="earn">Earn Upto ₹100</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Loans Icon.png" alt="Loans Icon"></a>
+      <a href="/loansneed" style="text-decoration: none; color: #333;"><h3>Loans</h3></a>
+      <p class="earn">Earn Upto ₹300</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Gold Loans Icon.png" alt="Gold Loans Icon">
+      <a href="/goldloanneed" style="text-decoration: none; color: #333;"><h3>Gold Loans</h3></a>
+      <p class="earn">Earn Upto ₹3700</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Layer_1[1](1).jpg" alt="Bookings Icon">
+      <a href="/bookingneed" style="text-decoration: none; color: #333;" ><h3>Bookings</h3></a>
+      <p class="earn">Earn Upto ₹300</p>
+    </div>
+    <div class="card">
+      <img src="image/dashboard/Registration Icon.png" alt="New Registration Icon">
+      <a href="/signupneed" style="text-decoration: none; color: #333;" ><h3 style="font-size: 24px;">New Registration</h3></a>
+      <p class="earn">Earn Upto ₹500</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>GOVERNMENT SERVICES(<span class="highlight">Free Services</span>)</h2>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <a href="https://uidai.gov.in/en/my-aadhaar/update-aadhaar.html">
+          <img src="image/dashboard/Update  Address.png" alt="Update Address">
+        </a>
+        <div><a href="https://uidai.gov.in/en/my-aadhaar/update-aadhaar.html" target="_blank"
+            style="text-decoration: none; color: black;">update Adress</a></div>
+      </div>
+
+      <div class="grid-item">
+        <a href="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en">
+          <img src="image/dashboard/Download Aadhaar.png" alt="Download Aadhaar" /></a>
+        <div><a href="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en" target="_blank"
+            style="text-decoration: none; color: black;">Download Aadhar</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a
+          href="https://uidai.gov.in/en/contact-support/have-any-question/925-english-uk/faqs/aadhaar-online-services/biometric-lock-unlock.html">
+          <img src="image/dashboard/Lock Unlock Bio-metric.png" alt="Lock/Unlock Bio-metric" /></a>
+        <div><a
+            href="https://uidai.gov.in/en/contact-support/have-any-question/925-english-uk/faqs/aadhaar-online-services/biometric-lock-unlock.html"
+            target="_blank" style="text-decoration: none; color: black;"> lock/unlock Bio Metrics</a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a href="https://www.uidai.gov.in/en/?catid=0&tmpl=component&faqid=46">
+          <img src="image/dashboard/Update History.png" alt="Update History" /></a>
+        <div><a href="https://www.uidai.gov.in/en/?catid=0&tmpl=component&faqid=46" target="_blank"
+            style="text-decoration: none; color: black;">Update History</a></div>
+      </div>
+      <div class="grid-item">
+        <a
+          href="https://uidai.gov.in/en/contact-support/have-any-question/1024-english-uk/faqs/aadhaar-online-services/order-aadhaar-pvc-card-online.html">
+          <img src="image/dashboard/Apply PVC Card.png" alt="Apply PVC Card" /></a>
+        <div><a
+            href="https://uidai.gov.in/en/contact-support/have-any-question/1024-english-uk/faqs/aadhaar-online-services/order-aadhaar-pvc-card-online.html"
+            target="_blank" style="text-decoration: none; color: black;">Apply PVC Card</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://uidai.gov.in/en/my-aadhaar/about-your-aadhaar/updating-data-on-aadhaar.html">
+          <img src="image/dashboard/Mobile Number Update.png" alt="Mobile Number Update" /></a>
+        <div><a href="https://uidai.gov.in/en/my-aadhaar/about-your-aadhaar/updating-data-on-aadhaar.html"
+            target="_blank" style="text-decoration: none; color: black;">Mobile Number Update</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://udyamregistration-msme.com/udyam-aadhar-registration/">
+          <img src="image/dashboard/MSME Registration.png" alt="MSME Registration" /></a>
+        <div><a href="https://udyamregistration-msme.com/udyam-aadhar-registration/" target="_blank"
+            style="text-decoration: none; color: black;">MSME Registration</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://nfdp.dof.gov.in/">
+          <img src="image/dashboard/Fisheries Portal.png" alt="Fisheries Portal" /></a>
+        <div><a href="https://nfdp.dof.gov.in/" target="_blank" style="text-decoration: none; color: black;">Fisheries
+            Portal</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://voters.eci.gov.in/">
+          <img src="image/dashboard/Voter ID Portal.png" alt="Voter ID Portal" /></a>
+        <div><a href="https://voters.eci.gov.in/" target="_blank" style="text-decoration: none; color: black;">Voter ID
+            Portal</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="http://register.eshram.gov.in/">
+          <img src="image/dashboard/e-SHRAM Registration.png" alt="e-SHRAM Registration" /></a>
+        <div><a href="http://register.eshram.gov.in/" target="_blank"
+            style="text-decoration: none; color: black;">e-SHRAM Registration</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://www.pan.utiitsl.com/reprint.html">
+          <img src="image/dashboard/Re-Print Pan Card.png" alt="Re-Print Pan Card" /></a>
+        <div><a href="https://www.pan.utiitsl.com/reprint.html" target="_blank"
+            style="text-decoration: none; color: black;">Re-Print Pan Card</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://parivahan.gov.in/">
+          <img src="image/dashboard/RTO Services.png" alt="RTO Services" /></a>
+        <div><a href="https://parivahan.gov.in/" target="_blank" style="text-decoration: none; color: black;">RTO
+            Services</a></div>
+      </div>
+
+      <div class="grid-item">
+        <a href="https://foscos.fssai.gov.in/">
+          <img src="image/dashboard/Food License Services.png" alt="Food License" /></a>
+        <div><a href="https://foscos.fssai.gov.in/" target="_blank" style="text-decoration: none; color: black;">Food
+            License Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/instant-e-pan/getNewEpan">
+          <img src="image/dashboard/Free Pan Card Apply.png" alt="Free Pan Card" /></a>
+        <div><a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/instant-e-pan/getNewEpan"
+            target="_blank" style="text-decoration: none; color: black;">Free Pan Card Apply</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/bl-link-aadhaar">
+          <img src="image/dashboard/Aadhar + Pan Link.png" alt="Aadhar + Pan" /></a>
+        <div><a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/bl-link-aadhaar" target="_blank"
+            style="text-decoration: none; color: black;">Aadhar + Pan Link</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://services.gst.gov.in/services/quicklinks/registration">
+          <img src="image/dashboard/GST Registration.png" alt="GST Registration" /></a>
+        <div><a href="https://services.gst.gov.in/services/quicklinks/registration" target="_blank"
+            style="text-decoration: none; color: black;">GST Registration</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://ttdevasthanams.ap.gov.in/">
+          <img src="image/dashboard/TTD Booking Services.png" alt="TTD Booking" /></a>
+        <div><a href="https://ttdevasthanams.ap.gov.in/" target="_blank"
+            style="text-decoration: none; color: black;">TTD Booking Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://www.passportindia.gov.in/">
+          <img src="image/dashboard/Passport Services.png" alt="Passport" /></a>
+        <div><a href="https://www.passportindia.gov.in/" target="_blank"
+            style="text-decoration: none; color: black;">Passport Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://myhpgas.in/myHPGas/Index.aspx">
+          <img src="image/dashboard/HP Gas Services.png" alt="HP Gas" /></a>
+        <div><a href="https://myhpgas.in/myHPGas/Index.aspx" target="_blank"
+            style="text-decoration: none; color: black;">HP Gas Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://my.ebharatgas.com/LPGServices/index">
+          <img src="image/dashboard/Bharat Gas Services.png" alt="Bharat Gas" /></a>
+        <div><a href="https://my.ebharatgas.com/LPGServices/index" target="_blank"
+            style="text-decoration: none; color: black;">Bharat Gas Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://www.incometax.gov.in/iec/foportal/">
+          <img src="image/dashboard/Income Tax Filing.png" alt="Income Tax" /></a>
+        <div><a href="https://www.incometax.gov.in/iec/foportal/" target="_blank"
+            style="text-decoration: none; color: black;">Income Tax Filing</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://swavlambancard.gov.in/Applyforudid">
+          <img src="image/dashboard/Govt Disability Services.png" alt="Disability" /></a>
+        <div><a href="https://swavlambancard.gov.in/Applyforudid" target="_blank"
+            style="text-decoration: none; color: black;">Govt Disability Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://pmkisan.gov.in/">
+          <img src="image/dashboard/PM Kisan Services.png" alt="PM Kisan" />
+          <div><a href="https://pmkisan.gov.in/" target="_blank" style="text-decoration: none; color: black;">PM Kisan
+              Services</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://ewaybillgst.gov.in/">
+          <img src="image/dashboard/E-way Bill System.png" alt="E-Way" /></a>
+        <div><a href="https://ewaybillgst.gov.in/" target="_blank" style="text-decoration: none; color: black;">E-way
+            Bill System</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="http://www.ubd.ap.gov.in:8080/UBDMIS/getSTDeaDetails.do?pstcode=28&style=bluetheme">
+          <img src="image/dashboard/Birth and Death Certificates.png" alt="Birth and Death Certificate" /></a>
+        <div><a href="http://www.ubd.ap.gov.in:8080/UBDMIS/getSTDeaDetails.do?pstcode=28&style=bluetheme"
+            target="_blank" style="text-decoration: none; color: black;">Birth&death Certificates</a></div>
+      </div>
+      <div class="grid-item">
+        <a href="https://www.epfindia.gov.in/site_en/For_Employees.php">
+          <img src="image/dashboard/EPFO Services.png" alt="EPFO services" /></a>
+        <div><a href="https://www.epfindia.gov.in/site_en/For_Employees.php" target="_blank"
+            style="text-decoration: none; color: black;">EPFO Services</a></div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <session>
+  <h2>TELANGANA STATE SERVICES(<span class="highlight">Free Services</span>)</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="https://tgsouthernpower.org/paybillonline">
+        <img src="image/dashboard/Current Bill Payment.png" alt="CURRENT BILL PAYMENT" /></a>
+      <div><a href="https://tgsouthernpower.org/paybillonline" target="_blank"
+          style="text-decoration: none; color: black;">CURRENT BILL PAYMENT</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://labour.telangana.gov.in/">
+        <img src="image/dashboard/Labour Certificate.png" alt="LABOUR Certificate" /></a>
+      <div><a href="https://labour.telangana.gov.in/" target="_blank"
+          style="text-decoration: none; color: black;">LABOUR Certificate</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp">
+        <img src="image/dashboard/Kalyana Lakshmi Pathakam Services.png" alt="KALYANA LAKSHMI Pathakam SERVICES" /></a>
+      <div><a href="https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp" target="_blank"
+          style="text-decoration: none; color: black;">KALYANA LAKSHMI Pathakam SERVICES</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://registration.telangana.gov.in/marriageRegistration.htm">
+        <img src="image/dashboard/Marriage Registration.png" alt="Marriage Registration" /></a>
+      <div><a href="https://registration.telangana.gov.in/marriageRegistration.htm" target="_blank"
+          style="text-decoration: none; color: black;">Marriage Registration</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://registration.telangana.gov.in/estamps.htm">
+        <img src="image/dashboard/TS-e-STAMPS.png" alt="TS-E-STAMPS" /></a>
+      <div><a href="https://registration.telangana.gov.in/estamps.htm" target="_blank"
+          style="text-decoration: none; color: black;">TS-E-STAMPS</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://echallan.tspolice.gov.in/publicview/">
+        <img src="image/dashboard/TS e-Challan Vehicle.png" alt="TS E-CHALAN Vehicle" /></a>
+      <div><a href="https://echallan.tspolice.gov.in/publicview/" target="_blank"
+          style="text-decoration: none; color: black;">TS E-CHALAN Vehicle</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="">
+        <img src="image/dashboard/Dharani Portal.png" alt="Dharani Portal" /></a>
+      <div><a href="https://www.example.com" target="_blank" style="text-decoration: none; color: black;">Dharani
+          Portal</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="http://sand.telangana.gov.in/TSSandPortal/Masters/Home.aspx">
+        <img src="image/dashboard/TS Sand Portal.png" alt="TS Sand Portal" /></a>
+      <div><a href="http://sand.telangana.gov.in/TSSandPortal/Masters/Home.aspx" target="_blank"
+          style="text-decoration: none; color: black;">TS Sand Portal</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://tgtransport.net/">
+        <img src="image/dashboard/TS Driving License.png" alt="TS Driving License" /></a>
+      <div><a href="https://tgtransport.net/" target="_blank" style="text-decoration: none; color: black;">TS Driving
+          License</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://onlinepayments.ghmc.gov.in/">
+        <img src="image/dashboard/Property Tax Dues GHMC.png" alt="Property Tax Dues GHMC" /></a>
+      <div><a href="https://onlinepayments.ghmc.gov.in/" target="_blank"
+          style="text-decoration: none; color: black;">Property Tax Dues GHMC</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://pvc.tspolice.gov.in/policeverificationandclearence">
+        <img src="image/dashboard/Police Verification.png" alt="Police Verification" /></a>
+      <div><a href="https://pvc.tspolice.gov.in/policeverificationandclearence" target="_blank"
+          style="text-decoration: none; color: black;">Police Verification</a></div>
+    </div>
+
+
+  </div>
+  </session>
+
+  <session>
+  <h2>ANDHRA PRADESH STATE SERVICES(<span class="highlight">Free Services</span>)</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="https://onlineap.meeseva.gov.in/CitizenPortal/UserInterface/Citizen/Home.aspx'">
+        <img src="image/dashboard/MeeSeva Services.png" alt="MeeSeva Services" /></a>
+      <div><a href="https://onlineap.meeseva.gov.in/CitizenPortal/UserInterface/Citizen/Home.aspx'" target="_blank"
+          style="text-decoration: none; color: black;">MeeSeva Services</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://crda.ap.gov.in/apcrdav2/views/ChangeofLanduse.aspx">
+        <img src="image/dashboard/Change of Land use or NALA Convertion.png" alt="Change of Land use or NALA Convertion" /></a>
+      <div><a href="https://crda.ap.gov.in/apcrdav2/views/ChangeofLanduse.aspx" target="_blank"
+          style="text-decoration: none; color: black;">Change of Land use or NALA Convertion</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.apcpdcl.in/">
+        <img src="image/dashboard/APCPDCL Current Bill Payment.png" alt="APCPDCL Current Bill Payment" /></a>
+      <div><a href="https://www.apcpdcl.in/" target="_blank" style="text-decoration: none; color: black;">APCPDCL
+          Current Bill Payment</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.apeasternpower.com/payBillOnline">
+        <img src="image/dashboard/APEPDCL Current Bill Payment.png" alt="APEPDCL Current Bill Payment" /></a>
+      <div><a href="https://www.apeasternpower.com/payBillOnline" target="_blank"
+          style="text-decoration: none; color: black;">APEPDCL Current Bill Payment</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://giribhumi.ap.gov.in/pages/Adangal.aspx">
+        <img src="image/dashboard/Search Adangal.png" alt="Search Adangal" /></a>
+      <div><a href="https://giribhumi.ap.gov.in/pages/Adangal.aspx" target="_blank"
+          style="text-decoration: none; color: black;">Search Adangal</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://echallan.parivahan.gov.in/index/accused-challan">
+        <img src="image/dashboard/AP Vehicle E-challan.png" alt="AP Vehicle E-challan" /></a>
+      <a href="https://echallan.parivahan.gov.in/index/accused-challan" target="_blank"
+        style="text-decoration: none; color: black;">Ap Vehicle E-Challan</a>
+
+    </div>
+  </div>
+  </session>
+
+  <session>
+  <h2>ADDITIONAL SERVICES(<span class="highlight">Free Services</span>)</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="https://fkrt.co/qBHnJG">
+        <img src="image/dashboard/flipkart.jpg" alt="Flipkart" /></a>
+      <div><a href="https://fkrt.co/qBHnJG" target="_blank" style="text-decoration: none; color: black;">Flipkart</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://myntr.in/7Gd3Ur">
+        <img src="image/dashboard/myntra.jpg" alt="Myntra" /></a>
+      <div><a href="https://myntr.in/7Gd3Ur" target="_blank" style="text-decoration: none; color: black;">Myntra</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://msho.in/O7jzD2">
+        <img src="image/dashboard/meesho.jpg" alt="Meesho" /></a>
+      <div><a href="https://msho.in/O7jzD2" target="_blank" style="text-decoration: none; color: black;">Meesho</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://bit.ly/3S9B7Cy">
+        <img src="image/dashboard/shopsy.jpg" alt="Shopsy" /></a>
+      <div><a href="https://bit.ly/3S9B7Cy" target="_blank" style="text-decoration: none; color: black;">Shopsy</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://bit.ly/3ZneYoa">
+        <img src="image/dashboard/hostinger.jpg" alt="Hostinger" /></a>
+      <div><a href="https://bit.ly/3ZneYoa" target="_blank" style="text-decoration: none; color: black;">Hostinger</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://bit.ly/43wvuVn">
+        <img src="image/dashboard/lenskart.jpg" alt="Lenskart" /></a>
+      <div><a href="https://bit.ly/43wvuVn" target="_blank" style="text-decoration: none; color: black;">Lenskart</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://bit.ly/3SElJhG">
+        <img src="image/dashboard/go daddy.jpg" alt="GODADDY" /></a>
+      <div><a href="https://bit.ly/3SElJhG" target="_blank" style="text-decoration: none; color: black;">GODADDY</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <a href="https://ajiio.co/E7XDms">
+        <img src="image/dashboard/AJIO.jpg" alt="AJIO" /></a>
+      <div><a href="https://ajiio.co/E7XDms" target="_blank" style="text-decoration: none; color: black;">AJIO</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://bit.ly/4dh8Aog">
+        <img src="image/dashboard/paisa bazaar.jpg" alt="Paisa bazaar credit score" /></a>
+      <div><a href="https://bit.ly/4dh8Aog" target="_blank" style="text-decoration: none; color: black;">Paisa bazaar
+          credit score</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.irctc.co.in/nget/train-search">
+        <img src="image/dashboard/irctc.jpg" alt="IRCTC" /></a>
+      <div><a href="https://www.irctc.co.in/nget/train-search" target="_blank"
+          style="text-decoration: none; color: black;">IRCTC</a></div>
+    </div>
+    <div class="grid-item">
+      <a href="https://www.apsrtconline.in/oprs-web/guest/home.do?h=1">
+        <img src="image/dashboard/Apsrtc.jpg" alt="APSRTC" /></a>
+      <div><a href="https://www.apsrtconline.in/oprs-web/guest/home.do?h=1" target="_blank"
+          style="text-decoration: none; color: black;">APSRTC</a></div>
+    </div>
+  </div>
+  </session>
+
+
+</body>
+</html>

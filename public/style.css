@@ -1,0 +1,190 @@
+body {
+      margin: 0;
+      padding-top: 0px;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      /* background-color: #fff; */
+      padding: 10px 20px;
+      /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+    .logo img {
+      height: 100px;
+      margin-right: 10px;
+      width: 500px;
+    }
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links a {
+      text-decoration: none;
+      margin-left: 40px;
+      color: orange;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* margin: 20px; */
+      background: linear-gradient(to right, #001f3f, #003366);
+      color: white;
+      padding: 17px 10px;
+    }
+    h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 35px;
+      margin-left: 70px;
+    }   
+    .card {
+      background-color: white;
+      color: #333;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width:200px;
+      height: 170px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+    .card img {
+      width: 70px;
+      height: 70px;
+    }
+    .earn {
+      font-size: 14px;
+      color: #555;
+      padding-top: 0px;
+    }
+    nav {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: orange;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #fff;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    .highlight {
+      color: orange;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+      font-size: 22px;
+      color: #003366;
+    }
+    .grid-item {
+      text-align: center;
+      font-size: 19px;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 30px;
+    }
+    .grid-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 8px;
+      border-radius: 30px;
+    }
+    
+    button {
+      color: blue;
+    }
+    .card h3{
+      font-size: 25px;
+    }
+ 
+/*sign up*/
+body {
+      background: linear-gradient(to bottom, #f7f1ff, #e1f0ff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .highlight {
+      color: #ff6600;
+      font-weight: bold;
+    }
+    .info-section {
+      padding: 4rem 2rem;
+    }
+    .info-section h1 {
+      font-size: 2.5rem;
+    }
+    .signup-box {
+      background-color: #f8f0ff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .signup-box h3 {
+      font-weight: bold;
+      color: #ff6600;
+    }
+    .signup-btn {
+      border-radius: 10px;
+      font-weight: 600;
+      color: #0d3c61;
+      border: 2px solid #0d3c61;
+      background-color: white;
+    }
+    .signup-btn:hover {
+      background-color: #0d3c61;
+      color: white;
+    }
+    .login-link {
+      font-weight: 500;
+      color: #000;
+      margin-top: 1.2rem;
+    }
+    .login-link a {
+      color: #0047ab;
+      text-decoration: none;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+    .pointer-img {
+        width: 100%;
+        max-width: 500px;      /* Adjust based on layout */
+        height: auto;
+        display: block;
+        margin-top: 0px;
+        margin-left: 380px;
+        object-fit: contain;   /* Preserves image aspect */
+    }
+    .signup-illustration {
+        max-width: 300px; /* increase this from 200px */
+        margin: 1.5rem auto 0;
+    }

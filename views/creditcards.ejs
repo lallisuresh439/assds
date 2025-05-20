@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credit Cards</title>
+  <style>
+    /* Container for all cards */
+/* Wrapper around heading + grid */
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      /* background-color: #fff; */
+      padding: 10px 20px;
+      /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    }
+     .logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+    .logo img {
+      height: 100px;
+      margin-right: 10px;
+      width: 500px;
+    }
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links a {
+      text-decoration: none;
+      margin-left: 40px;
+      color: orange;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+.content-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  background-color: #f1f5ff;
+}
+
+/* Heading aligned to grid */
+.section-title {
+  font-size: 37px;
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.sub-text {
+  color: #ff8c1a;
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+
+/* Grid layout for cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f1f5ff;
+}
+
+/* Individual loan/credit card */
+.loan-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.loan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header with logo and text */
+.loan-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.loan-card-header img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.loan-card-info h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.loan-card-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Offer banner */
+.offer-banner {
+  background-color: #ff8c1a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Fees box */
+.fees-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfeaff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.fee-box {
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+  color: #222;
+}
+
+.fee-divider {
+  font-size: 20px;
+  color: #555;
+  margin: 0 8px;
+}
+
+/* Features */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.features li {
+  margin-bottom: 5px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buttons button {
+  background-color: #ff8c1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #e67300;
+}
+  </style>
+</head>
+<body>
+    <body>
+    <header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="image/Credit Cards/Hiring Poster1Artboard 8@4x[1](1).jpg" alt="Logo">
+    </div>
+    <div class="nav-links">
+      <a href="/dashboard">Home</a>
+      <a href="/aboutneed">About Us</a>
+      <a href="/careerneed">Careers</a>
+      <a href="/logoutneed">Logout</a>
+    </div>
+  </div>
+  </header>
+<div class="content-wrapper">
+    <h1 class="section-title">
+        Apply Credit Cards & Earn Upto ₹1110 
+        <span class="sub-text">(On Successful Card Activation)</span>
+    </h1>
+
+    <div class="cards-container">
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/SBI Cashback Card.png" alt="SBI Card Logo">
+        <div class="loan-card-info">
+            <h3>SBI Cashback Card</h3>
+            <p>5% cashback on online purchases | Easy Bill Pay</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹645 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 999</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 999</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 5% cashback on online purchases, 1% on offline purchases.</li>
+        <li>✅ Easy Bill Pay</li>
+        <li>✅ 1% fuel surcharge waiver at petrol pumps</li>
+    </ul>
+    <div class="buttons">
+        <button onclick="applyLogin()">Apply With Login</button>
+        <button onclick="applyWithoutLogin()">Apply Without Login</button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC Bank Credit Cards.png" alt="HDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC Bank Credit Cards</h3>
+            <p>1% Fuel Surcharge Wavier | Get Reward points on every purchase</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn $600 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 499</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 499</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Fuel Surcharge Wavier</li>
+        <li>✅ Offers on Movie tickets & restaurants</li>
+        <li>✅ Travel benefits & Free Insurance</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCH" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCH" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/POP Club Credit Card By Yes Bank.png" alt="POP Club Card Logo">
+        <div class="loan-card-info">
+            <h3>POP Club Credit Card By Yes Bank</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹375 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ No joining fee</li>
+        <li>✅ 5000 worth joining benefits</li>
+        <li>✅ Earn 10% POPcoins on all online payments</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCP" style="text-decoration: none;color: white;">Apply With Login</a>
+</button>
+        <button><a href="/openWLCP" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/AU Credit Card.png" alt="AU Card Logo">
+        <div class="loan-card-info">
+            <h3>AU Credit Card</h3>
+            <p>4 complimentary lounge access | 3 Months of complimentary Membership</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹585 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 0% off on dining at Zomato</li>
+        <li>✅ Buy one get one free movie ticket</li>
+        <li>✅ 15% off on food orders at Swiggy</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCA" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCA" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/IDFC First Bank Free Credit Card.png" alt="IDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>IDFC First Bank Free Credit Card</h3>
+            <p>Welcome benefits worth up to 1,500 | Buy 1 Get 1 offer on movie tickets</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹300 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ complimentary Railway lounge</li>
+        <li>✅ Trip cancellation covers up to 2 claims</li>
+        <li>✅ Instant Discount on Flipkart</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCI" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCI" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/SBI IRCTC Credit Card.png" alt="SBI Card Logo">
+        <div class="loan-card-info">
+            <h3>SBI IRCTC Credit Card</h3>
+            <p>Save up to 10% as Value Back | SBI Card Get rewarded every time</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹645 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 500</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 500</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 10% as Value Back on rail ticket </li>
+        <li>✅ 1% Transaction Charges on Train bookings.</li>
+        <li>✅ Rewarded every time you plan a trip</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCSI" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCSI" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/SBI Simply Click Credit Card.png" alt="SBI Card Logo">
+        <div class="loan-card-info">
+            <h3>SBI Simply Click Credit Card</h3>
+            <p>5% cashback on online purchases | Easy Bill Pay annual spends of Rs 2,00,000</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹645 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 499</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 499</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Cashback Privileges with maximum value-back </li>
+        <li>✅ Instant 10% discount on Flipkart, Amazon & More</li>
+        <li>✅ e-voucher worth Rs.2,000 online spends</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCSS" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCSS" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/IDFC First Bank Rupay Card.png" alt="IDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>IDFC First Bank Rupay Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹300 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 199</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 199</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 3X Reward Points</li>
+        <li>✅ 25% Off* on Movie Tickets</li>
+        <li>✅ Complimentary Domestic Airport Lounge</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCIF" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCIF" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/ICICI Bank Credit Card.png" alt="ICICI Card Logo">
+        <div class="loan-card-info">
+            <h3>ICICI Bank Credit Card</h3>
+            <p>Fuel surcharge waiver at petrol pumps | No cost EMI options for high-value purchases</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹360 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 500</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 500</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Airport lounge access</li>
+        <li>✅ Fuel surcharge waiver</li>
+        <li>✅ No cost EMI options for high-value purchases</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCIC" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCIC" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<!-- work updation started form here -->
+
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Indusind Bank Credit Card.png" alt="Indusind Card Logo">
+        <div class="loan-card-info">
+            <h3>Indusind Bank Credit Card</h3>
+            <p>Get EazyDiner vouchers as a welcome gift.| You get accecc to the Luxe Gift Card.</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹540 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Indus Easy Credit Card.</li>
+        <li>✅ Lifetime free card.</li>
+        <li>✅ Fuel surcharge waiver</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCIn" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCIn" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/RBL Credit Card.png" alt="RBL Card Logo">
+        <div class="loan-card-info">
+            <h3>RBL Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹360 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 10% cashback at myntra, Uber & Zomato.</li>
+        <li>✅ 1+1 movie ticket on BookMyShow</li>
+        <li>✅ 2 complimentary lounge</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCR" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCR" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HSBC Platinum free Credit card.png" alt="HSBC Card Logo">
+        <div class="loan-card-info">
+            <h3>HSBC Platinum free Credit card</h3>
+            <p>Zero joining fees.|Cashback is also available on Instant EMI.</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹1110 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Unlimited cashback.</li>
+        <li>✅ Complimentary airport lounge access</li>
+        <li>✅ sonyLIV 12 month membership</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLChSbc" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLChSbc" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Standard Chartered Bank CC.png" alt="Standard Card Logo">
+        <div class="loan-card-info">
+            <h3>Standard Chartered Bank CC</h3>
+            <p>Get 4 reward points per INR 150 on all retail spends | Domestic Lounge Access</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹900 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 499</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 499</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 1% Fuel Surcharge Waiver.</li>
+        <li>✅ Get 4 reward points per INR 150 on all retail spends</li>
+        <li>✅ Domestic Lounge Access</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCSC" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCSC" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC TATA Neu Credit Card.png" alt="HDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC TATA Neu Credit Card</h3>
+            <p>Get 8 Complimentary Domestic | 4 Complimentary International Airport Lounge</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹600 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Complimentary Airport Lounge Access.</li>
+        <li>✅ 5% back as NewCoins on Tata Brand</li>
+        <li>✅ 1% fuel surcharge waiver </li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCtnf" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCtnf" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC Rupay Credit Card.png" alt="HDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC Rupay Credit Card</h3>
+            <p>vail upto 50 days of interest-free | Get 2% Cashpoints* on Utility spends</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹600 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 250</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 250</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Make UPI Payments using credit card & Get cash points.</li>
+        <li>✅ get 2% Cashpoints* on Utility spends</li>
+        <li>✅ Renewal fee waived spends of Rs.25,000 or more</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLChR" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLChR" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC IRCTC Credit Card.png" alt="HSFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC IRCTC Credit Card</h3>
+            <p>Earn 5 Reward Points for every INR 100 spent | Get RS.500/- Worth of gift voucher</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹900 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 500</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 500</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Earn 5 Reward points.</li>
+        <li>✅ Additional 5% cashback on tarin bookings</li>
+        <li>✅ Rs.500/- Worth of gift voucher</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLChI" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLChI" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC Swiggy Credit Card.png" alt="HSFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC Swiggy Credit Card</h3>
+            <p>Get 10% Cashback on Swiggy Platfrom | 3 months Swiggy One Membership</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹600 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 10% Cashback on Swiggy.</li>
+        <li>✅ 5% Cashback on Online Shopping Spends</li>
+        <li>✅ 3 months Swiggy One Membership</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLChS" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLChS" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Axis Myzone Credit Card.png" alt="Axis Card Logo">
+        <div class="loan-card-info">
+            <h3>Axis Myzone Credit card</h3>
+            <p>1 year Free Sony Liv Subscription | Buy one Get one free on Movie tickets</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹510 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 40% off on Swiggy.</li>
+        <li>✅ 1 year Free Sony Liv Subscription</li>
+        <li>✅ Complimentary airport lounge access</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCaM" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCaM" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Tata Neu FD Card.png" alt="TATA Card Logo">
+        <div class="loan-card-info">
+            <h3>Tata Neu Fd Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹165 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Earn NeuCoins on purchases.</li>
+        <li>✅ Get up to four complimentary domestic lounge</li>
+        <li>✅ additional 1% fuel surcharge</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCtnf" style="text-decoration: none;color: white;">Apply With Login</a>
+</button>
+        <button><a href="/openWLCtnf" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Axis Flipkart Credit Card.png" alt="Axis Card Logo">
+        <div class="loan-card-info">
+            <h3>Axis Flipkart Credit Card</h3>
+            <p>Get Rs.500 Worth Flipkart Gift Voucher | 15% Cashback on 1st Myntra Order</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹510 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 500</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 500</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Rs.500 Worth Flipkart Gift Voucher.</li>
+        <li>✅ Lifetime Cashback on Flipkart</li>
+        <li>✅ Lifetime Cashback on Uber, Swiggy & 1MG</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCaF" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCaF" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Axis Reward Credit Card.png" alt="Axis Card Logo">
+        <div class="loan-card-info">
+            <h3>Axis Reward Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹510 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 1000</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 1000</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Earn 2 EDGE reward points for every Rs.125 spent.</li>
+        <li>✅ Get 10x reward points on apparel & departmental purchases.</li>
+        <li>✅ Receive 2 complimentary domestic lounge accesses.</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCaR" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCaR" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Novio Rupay Credit Card.png" alt="Novio Card Logo">
+        <div class="loan-card-info">
+            <h3>Novio Rupay Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹135 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 10x Reward on Fuel via UPI.</li>
+        <li>✅ 5x on Other Spends</li>
+        <li>✅ Earn Unlimited rewards that never expire!</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCN" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCN" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Axis Myzone Rupay Credit Card.png" alt="Axis Card Logo">
+        <div class="loan-card-info">
+            <h3>Axis Myzone Rupay Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹510 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ 1 year Free Sony Liv Subscription.</li>
+        <li>✅ Complimentary airport lounge access</li>
+        <li>✅ 40% off on Swiggy</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCAMR" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCAMR" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Axis Indian Oil Credit Card.png" alt="Axis Card Logo">
+        <div class="loan-card-info">
+            <h3>Axis Indian Oil Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹510 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 500</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 500</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Earn 20 EDGE reward points.</li>
+        <li>✅ Acclerated Reward Points</li>
+        <li>✅ Enjoy a 1% fuel surcharge waiver</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCAIO" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCAIO" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/HDFC Bonvoy Marriott Card.png" alt="HDFC Card Logo">
+        <div class="loan-card-info">
+            <h3>HDFC Bonvoy Marriott Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹750 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 3000</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 3000</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Golf: 2 free sessions/quater.</li>
+        <li>✅ Lounge Access</li>
+        <li>✅ Free Nights on ₹6L, ₹9L, ₹15L spends/year</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLChB" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLChB" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/Tide.png" alt="Tide Card Logo">
+        <div class="loan-card-info">
+            <h3>Tide</h3>
+            <p>Easy expenses. Upload receipts | Send, pay and track invoices</p>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹90 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 0</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 0</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Prepaid limit up to INR 2,00,000 .</li>
+        <li>✅ Lock,unlock, and block your card anytime.</li>
+        <li>✅ No joining Fees | No Annual Fees.</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCT" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCT" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+<div class="loan-card">
+    <div class="loan-card-header">
+        <img src="image/Credit Cards/SBI Simply SAVE UPI Credit Card.png" alt="SBI Card Logo">
+        <div class="loan-card-info">
+            <h3>SBI Simply SAVE UPI Credit Card</h3>
+        </div>
+    </div>
+    <div class="offer-banner">
+        <p>Earn ₹645 on Successful Card Activation.</p>
+    </div>
+    <div class="fees-section">
+        <div class="fee-box">
+            <p><strong>Annual Fees</strong><br>₹ 499</p>
+        </div>
+        <div class="fee-divider">|</div>
+        <div class="fee-box">
+            <p><strong>Joining Fees</strong><br>₹ 499</p>
+        </div>
+    </div>
+    <ul class="features">
+        <li>✅ Earn 2,000 reward points.</li>
+        <li>✅ Easy 10x reward points on every ₹100 spent</li>
+        <li>✅ Easy UPI payments.</li>
+    </ul>
+    <div class="buttons">
+        <button><a href="/openLCsss" style="text-decoration: none;color: white;">Apply With Login</a></button>
+        <button><a href="/openWLCsss" style="text-decoration: none;color: white;">Apply Without Login</a></button>
+    </div>
+</div>
+
+</div>
+    </div>            
+        <script src="script.js"></script>
+    </body>
+</html>

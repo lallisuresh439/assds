@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Plans</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f7f9ff;
+      color: #1a1a1a;
+      padding: 40px 20px;
+    }
+
+    .pricing-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 60px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .left-panel,
+    .right-panel {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .left-panel {
+      text-align: left;
+    }
+
+    .left-panel h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .left-panel .highlight {
+      color: #f97316;
+      font-weight: 600;
+    }
+
+    .left-panel .subheading {
+      font-size: 16px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .login-link {
+      text-align: right;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .login-link a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .plans-container {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .plans-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .plan {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .plan h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .plan .price {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .plan .duration {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .plan .for {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .plan ul {
+      list-style: none;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    .buy-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .buy-btn a {
+      display: block;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .buy-btn a:hover {
+      transform: scale(1.03);
+      opacity: 0.95;
+    }
+
+    /* Background gradients */
+    .plan.basic {
+      background: linear-gradient(to bottom right, #3b82f6, #1e3a8a);
+      color: #ffffff;
+    }
+
+    .plan.premium {
+      background: linear-gradient(to bottom right, #f97316, #ec4899);
+      color: #ffffff;
+    }
+
+    .plan ul li,
+    .plan h2,
+    .plan .price,
+    .plan .duration,
+    .plan .for {
+      color: #ffffff !important;
+    }
+
+    .plan.basic .buy-btn a {
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+    }
+
+    .plan.premium .buy-btn a {
+      background: linear-gradient(to right, #ec4899, #f97316);
+    }
+
+    @media (max-width: 768px) {
+      .pricing-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .left-panel,
+      .right-panel {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      /* background-color: #fff; */
+      padding: 10px 20px;
+      /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+    .logo img {
+      height: 100px;
+      margin-right: 10px;
+      width: 500px;
+    }
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links a {
+      text-decoration: none;
+      margin-left: 40px;
+      color: orange;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="image/main/Hiring Poster1Artboard 8@4x[1](1).jpg" alt="Logo">
+      </div>
+      <div class="nav-links">
+        <a href="/main">Home</a>
+        <a href="/aboutneeds">About Us</a>
+        <a href="/careerneeds">Careers</a>
+    
+      </div>
+    </div>
+  </header>
+  <section class="pricing-section">
+    <div class="left-panel">
+      <h1>Choose Your Plan <span class="highlight italic">& Earn More</span></h1>
+      <p class="subheading">
+        Unlock exclusive earning potential with the Premium Plan – Start earning up to ₹1 Lakh/month
+        with full support and weekly payouts.
+      </p>
+      <img src="image/Layer_1.png" alt="Earnings Illustration" class="illustration" />
+    </div>
+
+    <div class="right-panel">
+      <div class="login-link">HAVE AN ACCOUNT? <a href="/login">LOGIN HERE</a></div>
+      <div class="plans-container">
+        <!-- BASIC PLAN -->
+        <div class="plan basic">
+          <h2>BASIC</h2>
+          <div class="price">₹0</div>
+          <p class="duration">LIFETIME FREE</p>
+          <p class="for">FOR INDIVIDUAL</p>
+          <ul>
+            <li>✅ Use All Services For Free</li>
+            <li>✅ Free Login & Password</li>
+            <li>❌ No Commissions / Earnings</li>
+            <li>❌ No Customer Support</li>
+            <li>❌ No Payouts</li>
+          </ul>
+          <button class="buy-btn"><a href="user-signup">BUY NOW</a></button>
+        </div>
+
+        <!-- PREMIUM PLAN -->
+        <div class="plan premium">
+          <h2>PREMIUM</h2>
+          <div class="price">₹499</div>
+          <p class="duration">LIFETIME FREE</p>
+          <p class="for">FOR AGENTS</p>
+          <ul>
+            <li>✅ Use All Services For Free</li>
+            <li>✅ Agent Login & Password</li>
+            <li>✅ Earning up to 1 Lakh/Month</li>
+            <li>✅ 24/7 Customer Support</li>
+            <li>✅ Weekly Payouts</li>
+          </ul>
+          <button class="buy-btn"><a href="buypremium">BUY NOW</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
