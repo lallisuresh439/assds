@@ -47,15 +47,13 @@ app.post("/loginIn", async (req, res) => {
         // Set JWT in cookie with appropriate options
         res.cookie('token', token, {
             httpOnly: true,
-            sameSite: 'Lax', // If you are deploying, change this to 'None'
-            secure: false    // If you are deploying to HTTPS, make this true
+            sameSite: 'None', // If you are deploying, change this to 'None'
+            secure: true    // If you are deploying to HTTPS, make this true
         });
 
-        console.log("Login successful!");
         return res.status(200).json({ message: "Login successful!" });
 
     } catch (error) {
-        console.error("Login Error:", error.message);
         res.status(500).json({ message: "Server error. Please try again later." });
     }
 });
@@ -69,7 +67,7 @@ function authenticateToken(req, res, next) {
         const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
         return wantsJSON
             ? res.status(401).json({ message: 'Authentication required' })
-            : res.redirect('/user-login');
+            : res.redirect('/login');
     }
 
     jwt.verify(token, "your_jwt_secret", (err, user) => {
@@ -77,64 +75,13 @@ function authenticateToken(req, res, next) {
             const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
             return wantsJSON
                 ? res.status(401).json({ message: 'Invalid or expired token' })
-                : res.redirect('/user-login');
+                : res.redirect('/login');
         }
 
         req.user = user;
         next();
     });
 }
-
-// function authenticateToken(req, res, next) {
-//     const token = req.cookies.token;
-//     if (!token) {
-//         // If AJAX/API request, send JSON error
-//         if (req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1)) {
-//             return res.status(401).json({ message: 'Authentication required' });
-//         }
-//         // Otherwise, redirect to user-login page
-//         return res.redirect('/user-login');
-//     }
-//     jwt.verify(token, "your_jwt_secret", (err, user) => {
-//         if (err) {
-//             if (req.xhr || req.headers.accept.indexOf('json') > -1) {
-//                 return res.status(401).json({ message: 'Invalid or expired token' });
-//             }
-//             return res.redirect('/user-login');
-//         }
-//         req.user = user;
-//         next();
-//     });
-// }
-
-// function authenticateToken(req, res, next) {
-//     const token = req.cookies.token;
-
-//     if (!token) {
-//         const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
-        
-//         if (wantsJSON) {
-//             return res.status(401).json({ message: 'Authentication required' });
-//         }
-//         return res.redirect('/user-login');
-//     }
-
-//     jwt.verify(token, "your_jwt_secret", (err, user) => {
-//         if (err) {
-//             const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
-
-//             if (wantsJSON) {
-//                 return res.status(401).json({ message: 'Invalid or expired token' });
-//             }
-//             return res.redirect('/user-login');
-//         }
-
-//         req.user = user;
-//         next();
-//     });
-// }
-
-
 // Public routes (no auth required)
 app.get("/main", async (req, res) => {
     res.render('main');
@@ -144,9 +91,6 @@ app.get("/careerneeds", async (req, res) => {
 });
 app.get("/aboutneeds", async (req, res) => {
     res.render('mabout');
-});
-app.get("/login", async (req, res) => {
-    res.render('login');
 });
 app.get("/user-login", async (req, res) => {
     res.render('user-login');
@@ -204,28 +148,6 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-//user login
-app.post("/loginIn", async (req, res) => {
-    try {
-        const check = await UserModel.findOne({ email: req.body.email });
-        if (!check) {
-            return res.send("Email not found");
-        }
-        const isPassword = await bcrypt.compare(req.body.password, check.password);
-        if (isPassword) {
-            res.render("dashboard");  
-        } else {
-            res.send("Wrong password");
-        }
-    } catch (error) {
-        console.error("Login error:", error);
-        res.send("Something went wrong");
-    }
-});
-// app.get("/dashboard", (req, res) => {
-//     res.render("dashboard"); // dashboard.ejs must exist in /views folder
-// });
-
 //agent login
 app.post("/loginAgent", async (req, res) => {
     try {
@@ -247,8 +169,8 @@ app.post("/loginAgent", async (req, res) => {
             // ✅ Set JWT in cookie
             res.cookie('token', token, {
                 httpOnly: true,
-                sameSite: 'Lax',
-                secure: false // true if using HTTPS
+                sameSite: 'None', // If you are deploying, change this to 'None'
+                secure: true    // true if using HTTPS
             });
             return res.status(200).json({ message: "Login successful" });
         } else {
@@ -340,6 +262,7 @@ app.get("/openWithLoginneed", (req, res) => {
 app.get("/openWithOutLoginneed", (req, res) => {
     res.render('openWithOutLogin');   // Redirect to login page (or homepage if you prefer)
 });
+
 //lones
 app.get("/openLoginLH",(req,res)=>{
     res.render('openLoginLH');
@@ -353,14 +276,14 @@ app.get("/openLoginLU",(req,res)=>{
 app.get("/openwithLoginLU",(req,res)=>{
     res.render('openWithOutLoginLU');
 });
-app.get("/openLoginLB",(req,res)=>{
-    res.render('openLoginLB');
-});
-app.get("/openwithLoginLB",(req,res)=>{
-    res.render('openWithOutLoginLB');
-});
 app.get("/openLoginLA",(req,res)=>{
     res.render('openLoginLA');
+});
+app.get("/openWithLoginLA",(req,res)=>{
+    res.render('openWithLoginLA');
+});
+app.get("/openLoginLB",(req,res)=>{
+    res.render('openLoginLB');
 });
 app.get("/openWithOutLoginLB",(req,res)=>{
     res.render('openWithOutLoginLB');
@@ -371,6 +294,7 @@ app.get("/openLoginLAX",(req,res)=>{
 app.get("/openwithLoginLAX",(req,res)=>{
     res.render('openWithOutLoginLAX');
 });
+
 //gold loan
 app.get("/openLG",(req,res)=>{
     res.render('openLG');
@@ -378,6 +302,7 @@ app.get("/openLG",(req,res)=>{
 app.get("/openWLG",(req,res)=>{
     res.render('openWLG');
 });
+
 //booking
 app.get("/openLBG",(req,res)=>{
     res.render('openLBG');
@@ -415,6 +340,7 @@ app.get("/openLBI",(req,res)=>{
 app.get("/openWLBI",(req,res)=>{
     res.render('openWLBI');
 });
+
 //mutuals
 app.get("/openLMC",(req,res)=>{
     res.render('openLMC');
@@ -428,6 +354,7 @@ app.get("/openLMS",(req,res)=>{
 app.get("/openWLMS",(req,res)=>{
     res.render('openWLMS');
 });
+
 //Bank Accounts(BA)
 app.get("/openLBAA",(req,res)=>{
     res.render('openLBAA');
@@ -439,7 +366,7 @@ app.get("/openLBAY",(req,res)=>{
     res.render('openLBAY');
 });
 app.get("/openWLBAA",(req,res)=>{
-    res.render('openWLBAY');
+    res.render('openWLBAA');
 });
 app.get("/openLBAI",(req,res)=>{
     res.render('openLBAI');
