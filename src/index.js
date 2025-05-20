@@ -64,25 +64,48 @@ app.post("/loginIn", async (req, res) => {
 // JWT authentication middleware
 function authenticateToken(req, res, next) {
     const token = req.cookies.token;
+
     if (!token) {
-        // If AJAX/API request, send JSON error
-        if (req.xhr || req.headers.accept.indexOf('json') > -1) {
-            return res.status(401).json({ message: 'Authentication required' });
-        }
-        // Otherwise, redirect to user-login page
-        return res.redirect('/user-login');
+        const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
+        return wantsJSON
+            ? res.status(401).json({ message: 'Authentication required' })
+            : res.redirect('/user-login');
     }
+
     jwt.verify(token, "your_jwt_secret", (err, user) => {
         if (err) {
-            if (req.xhr || req.headers.accept.indexOf('json') > -1) {
-                return res.status(401).json({ message: 'Invalid or expired token' });
-            }
-            return res.redirect('/user-login');
+            const wantsJSON = req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1);
+            return wantsJSON
+                ? res.status(401).json({ message: 'Invalid or expired token' })
+                : res.redirect('/user-login');
         }
+
         req.user = user;
         next();
     });
 }
+
+// function authenticateToken(req, res, next) {
+//     const token = req.cookies.token;
+//     if (!token) {
+//         // If AJAX/API request, send JSON error
+//         if (req.xhr || (req.headers.accept && req.headers.accept.indexOf('json') > -1)) {
+//             return res.status(401).json({ message: 'Authentication required' });
+//         }
+//         // Otherwise, redirect to user-login page
+//         return res.redirect('/user-login');
+//     }
+//     jwt.verify(token, "your_jwt_secret", (err, user) => {
+//         if (err) {
+//             if (req.xhr || req.headers.accept.indexOf('json') > -1) {
+//                 return res.status(401).json({ message: 'Invalid or expired token' });
+//             }
+//             return res.redirect('/user-login');
+//         }
+//         req.user = user;
+//         next();
+//     });
+// }
 
 // function authenticateToken(req, res, next) {
 //     const token = req.cookies.token;
@@ -199,9 +222,9 @@ app.post("/loginIn", async (req, res) => {
         res.send("Something went wrong");
     }
 });
-app.get("/dashboard", (req, res) => {
-    res.render("dashboard"); // dashboard.ejs must exist in /views folder
-});
+// app.get("/dashboard", (req, res) => {
+//     res.render("dashboard"); // dashboard.ejs must exist in /views folder
+// });
 
 //agent login
 app.post("/loginAgent", async (req, res) => {
@@ -276,9 +299,8 @@ app.get("/logoutneed", (req, res) => {
 
 // Protect all routes below this line
 app.use(authenticateToken);
-app.get("/dashboard", (req, res) => {
-    res.render("dashboard"); // dashboard.ejs must exist in /views folder
-});
+
+
 app.get("/getLoan", async (req, res) => {
     res.render('loan');
 });
@@ -287,6 +309,9 @@ app.get('/loansneed', (req, res) => {
 });
 app.get('/goldloanneed', (req, res) => {
     res.render('goldloan');
+});
+app.get("/dashboard", (req, res) => {
+    res.render("dashboard"); // dashboard.ejs must exist in /views folder
 });
 app.get('/bankaccountneed', (req, res) => {
     res.render('bankaccount');
@@ -337,8 +362,8 @@ app.get("/openwithLoginLB",(req,res)=>{
 app.get("/openLoginLA",(req,res)=>{
     res.render('openLoginLA');
 });
-app.get("/openwithLoginLA",(req,res)=>{
-    res.render('openWithOutLoginLA');
+app.get("/openWithOutLoginLB",(req,res)=>{
+    res.render('openWithOutLoginLB');
 });
 app.get("/openLoginLAX",(req,res)=>{
     res.render('openLoginLAX');
